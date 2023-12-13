@@ -128,8 +128,3 @@
   }
 }
 
-@media screen and (max-width: 479px) {
-  .centered-container {
-    text-align: left;
-  }
-}
