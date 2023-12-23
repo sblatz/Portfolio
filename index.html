@@ -111,7 +111,7 @@
       /* align-items: center; */
       /* gap: 10px; */
     }
-    
+
     .call-to-action-container {
       display: flex;
       flex-direction: column;
@@ -139,7 +139,6 @@
 
       /* Rosponsive hover effect using transition */
       /* perspective: 1000px; */
-
     }
 
     /* .image-container img {
@@ -209,50 +208,73 @@
     }
 
     .photo-stack {
-      position: relative;
-      width: 400px;
-      /* assuming width of one photo */
-      height: 300px;
-      /* assuming height of one photo */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: gray;
+      width: 25%;
+      max-width: 400px;
+      align-self: center;
+      flex-grow: 0;
+      border-radius: 10px;
     }
+
+    /* .photo-stack:hover */
+    /* .photo {
+      position: absolute;
+      max-width: 400px;
+      transition: all 0.3s ease-out;
+      opacity: 0.25;
+    } */
+
+    /* 
+    .photo:hover {
+      position: absolute;
+      max-width: 400px;
+      transition: all 0.3s ease-out;
+      opacity: 1;
+      scale: 1.05;
+    } */
 
     .photo {
       position: absolute;
-      max-width: 300px;
-      transition: all 0.3s ease-out;
-      /* adjust as per your needs */
+      max-width: 400px;
+      transition: all 0.25s ;
+      border-radius: 10px;
+
     }
 
     .photo:nth-child(1) {
       z-index: 1;
-      transform: rotateZ(-4deg) translateX(-50px);
+      transform: rotateZ(-4deg) translateX(-75px) translateY(-150px);
     }
 
     .photo:nth-child(2) {
       z-index: 2;
-      transform: rotateZ(0deg);
+      transform: rotateZ(3deg) translateX(90px);
     }
 
     .photo:nth-child(3) {
       z-index: 3;
-      transform: rotateZ(6deg) translateX(20px);
+      transform: rotateZ(-2deg) translateX(-60px) translateY(150px);
     }
 
-    .photo-stack:hover .photo:nth-child(1) {
+
+
+    /*
+     .photo-stack:hover .photo:nth-child(1) {
       transform: rotateZ(-2deg) translateX(-100px);
-      /* adjust as per your needs */
     }
 
     .photo-stack:hover .photo:nth-child(2) {
       transform: rotateZ(-2deg) translateY(-150px);
-      /* adjust as per your needs */
     }
 
     .photo-stack:hover .photo:nth-child(3) {
       transform: rotateZ(2deg) translateX(100px);
-      /* adjust as per your needs */
-    }
+    } 
 
+    /*
     /* SIZE TBD */
     @media screen and (min-width: 600px) {
 
@@ -260,7 +282,6 @@
         width: 45%;
         max-width: 300px;
         align-self: start;
-
       }
 
       .card-header {
@@ -271,6 +292,8 @@
         /* padding: 20px; */
         flex-direction: row;
         gap: 40px;
+        margin-bottom: 80px;
+
       }
 
       .medium-text {
@@ -287,6 +310,11 @@
     }
 
     @media screen and (min-width: 800px) {
+      .profile-image-container {
+        /* padding: 20px; */
+        flex-direction: row;
+      }
+      
       .profile-image {
         width: 45%;
         max-width: 300px;
@@ -310,6 +338,11 @@
 
       .medium-text {
         font-size: 24px;
+      }
+
+      .profile-image-container {
+        gap: 80px;
+        margin-bottom: 150px;
       }
     }
 
@@ -369,7 +402,6 @@
         font-size: 32px;
       }
     }
-  
   </style>
 </head>
 
@@ -407,7 +439,7 @@
           <div>
 
             <h2 class="card-header">4+ years of industry experience.</h2>
-            <h2 class="medium-text">iOS developer at Lyft, Slack, and Mozilla.
+            <h2 class="medium-text">iOS engineer at Lyft, Slack, and Mozilla.
               Shipped major features, optimizations, and critical fixes to millions of users.</h2>
           </div>
           <div>
@@ -424,11 +456,7 @@
       </div>
     </div>
 
-    <!-- <div class="photo-stack">
-      <img class="photo" src="photography/bushtit_in_tree.jpg" alt="Image 1">
-      <img class="photo" src="photography/chickadee_perched.jpg" alt="Image 2">
-          <img class="photo" src="photography/leaves_in_rain.jpg" alt="Image 3">
-    </div> -->
+
 
     <div class="profile-image-container" data-aos="fade-up" data-aos-delay="200">
       <div class="nudget-text call-to-action-container">
@@ -447,18 +475,63 @@
 
     </div>
 
-    <!-- <div class="work-container">
-      <div class="card">
-        <h1 class="card-header">Nudget</h1>
-        <h2 class="medium-text">A minimalist budgeting app with a focus on ease of use.</h2>
-        <a href="https://nudgetapp.com" class="contact-button">Learn more ›</a>
+    <div class="profile-image-container" data-aos="fade-up" data-aos-delay="200">
+      <div class="nudget-text call-to-action-container" style="order: 2">
+        <div>
+          <h1 class="card-header">Long COVID Moonshot</h1>
+          <h2 class="medium-text">An advocacy website designed to raise awareness and demand funding for Long COVID.
+          </h2>
+          <h2 class="medium-text">I personally have been suffering from severe Long COVID for over a year now. There are
+            zero proven treatments, and research funding is drying up.</h2>
+        </div>
+
+        <a href="https://longcovidmoonshot.com" class="contact-button">Learn more ›</a>
+
+      </div>
+
+      <img class="nudget-image profile-image" style="max-width: 800px; order: 1;" src="images/moonshot2.jpg">
+
+    </div>
+
+    <div class="profile-image-container" data-aos="fade-up" data-aos-delay="200">
+      <div class="nudget-text call-to-action-container">
+        <div>
+          <h1 class="card-header">Photography</h1>
+          <h2 class="medium-text">Photography has been a hobby of mine for years now. Recently, I've upgraded my gear
+            and taken up birding.</h2>
+          <h2 class="medium-text">You can see some of my favorite shots in the gallery below.</h2>
+        </div>
+
+        <a href="https://longcovidmoonshot.com" class="contact-button">View the gallery ›</a>
+
+      </div>
+
+
+      <img class="nudget-image profile-image" style="max-width: 800px; order: 1; box-shadow: none;" src="images/photography_snapshot.jpg">
+
+      <!-- <div class="nudget-image profile-image style=:max-width: 800px;" > -->
+            <!-- <img class="nudget-image profile-image" src="photography/leaves_in_rain.jpg" alt="Image 1"/> -->
+
+        <!-- </div>  -->
+
+      <!-- <div class="profile-image" style="max-width: 800px; order: 2;" > -->
+        <!-- <img class="nudget-image profile-image style=:max-width: 800px;" src="photography/leaves_in_rain.jpg" alt="Image 1"> -->
+
+        <!-- <div class="photo-stack" style="max-width: 800px; order: 2;" id="photo-stack"> 
+         <img class="photo" src="photography/leaves_in_rain.jpg" alt="Image 1">
+           <img class="photo" src="photography/bushtit_in_tree.jpg" alt="Image 2">
+          <img class="photo" src="photography/chickadee_perched.jpg" alt="Image 3"> 
+         </div>
+      </div>  -->
+
+
+      <!-- <div class="photo-stack" style="height: 625px; width: 625px;">
+       
       </div> -->
 
-    <!-- <div class="card">
-        <h1 class="card-header">Long COVID Moonshot</h1>
-        <h2 class="medium-text">An advoacy website designed to raise awareness & demand funding for Long COVID.</h2>
-        <a href="https://longcovidmoonshot.com" class="contact-button">Learn more ›</a>
-      </div> -->
+
+
+    </div>
 
   </div>
 
@@ -469,5 +542,26 @@
       once: true,
       mirror: true
     });
+  </script>
+
+  <script>
+    const container = document.getElementById('photo-stack');
+    const images = container.getElementsByClassName('photo');
+
+    for (let img of images) {
+      img.addEventListener('mouseover', () => {
+        for (let i of images) {
+          i.style.zIndex = i === img ? '1' : '0'; 
+          i.style.opacity = i === img ? '1' : '0.25';  // If it's the hovered image, keep it visible. Otherwise, hide it.
+        }
+      });
+
+      img.addEventListener('mouseout', () => {
+        for (let i of images) {
+          i.style.opacity = '1';  // When mouseout, make all images visible.
+          i.style.zIndex = '0'; 
+        }
+      });
+    }
   </script>
 </body>
