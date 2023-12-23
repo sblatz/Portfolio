@@ -1,34 +1,288 @@
 <head>
-    <meta charset="utf-8">
-    <title>Sawyer Blatz</title>
-    <link href="webflow.css" rel="stylesheet" type="text/css">
-    <link href="styles.css" rel="stylesheet" type="text/css">
-    <link href="normalize.css" rel="stylesheet" type="text/css">
+  <meta charset="utf-8">
+  <title>Sawyer Blatz</title>
 
-    <!--  Smart link previews  -->
-    <meta property="og:image" content="images/preview.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@SawyerBlatz">
-    <meta name="twitter:title" content="Sawyer Blatz">
-    <meta name="twitter:image" content="images/preview.png">
-    <!--  End smart link previews  -->
-    <meta content="width=device-width, initial-scale=1" name="viewport">
+  <!--  Smart link previews  -->
+  <meta property="og:image" content="images/preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@SawyerBlatz">
+  <meta name="twitter:title" content="Sawyer Blatz">
+  <meta name="twitter:image" content="images/preview.png">
+  <!--  End smart link previews  -->
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <!-- Add the AOS library links -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .body-container {
+      padding: 20px;
+    }
+
+    .header {
+      font-size: 92px;
+      font-weight: bold;
+      /* font-family: Roboto; */
+      color: #030712;
+      /* margin-bottom: -15px; */
+      line-height: 1em;
+      margin-bottom: 10px;
+    }
+
+    .card-header {
+      font-size: 48px;
+      font-weight: bold;
+      /* font-family: Roboto; */
+      color: #030712;
+      /* margin-bottom: -15px; */
+      line-height: 1em;
+      margin-bottom: 10px;
+    }
+
+    .sub-header {
+      /* font-family: Roboto; */
+      font-size: 32px;
+      /* font-weight: 500; */
+      color: #4b5563;
+      line-height: 1.1em;
+      padding-left: 5px;
+    }
+
+    .medium-text {
+      font-size: 32px;
+      color: #030712;
+      /* font-weight: 300; */
+      line-height: 1.2em;
+      word-wrap: break-word;
+    }
+
+    .header-block {
+      /* padding: 20px; */
+    }
+
+    .card-body {
+      font-size: 24px;
+      font-weight: thin;
+      color: #030712;
+    }
+
+    body {
+      font-family: Roboto;
+    }
+
+    .big-container {
+      display: flex;
+      align-items: center;
+      max-width: 1500px;
+      /* padding-left: 20px;
+      padding-right: 20px; */
+    }
+
+    .profile-image-container {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      /* align-items: center; */
+      gap: 45px;
+    }
+
+    .work-container { 
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      /* align-items: center; */
+      gap: 20px;
+    }
+
+    .call-to-action-container {
+      display: flex;
+      flex-direction: column;
+      /* justify-content: start; */
+      align-items: start;
+      gap: 40px;
+      /* width: 1200px; */
+      word-wrap: normal;
+      flex-grow: 1;
+
+      /* max-width: 800px; */
+    }
+
+    .profile-image {
+      width: 100%;
+      max-width: 400px;
+      align-self: center;
+      flex-grow: 0;
+      border-radius: 10px;
+      /* Rounded corners */
+      box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.25);
+      /* Adds shadow */
+      transition: transform 0.3s ease;
+      /* Rosponsive hover effect using transition */
+    }
+
+     .card {
+width: 100%;
+padding: 20px;
+background-color: #fff;
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+border-radius: 10px;
+margin: auto;
+}
 
 
+    .contact-button {
+      /* background-color: hsl(0, 7%, 82%); */
+      color: #030712;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      /* text-decoration: none; */
+      display: inline-block;
+      margin: 2px 1px;
+      border: 2px;
+      border-color: #030712;
+      border-radius: 5px;
+    }
+
+
+    /* SIZE TBD */
+    @media screen and (min-width: 600px) {
+
+
+      .profile-image {
+        width: 50%;
+        max-width: 300px;
+        align-self: start;
+
+      }
+
+      .profile-image-container {
+        /* padding: 20px; */
+        flex-direction: row;
+        gap: 40px;
+      }
+
+      .medium-text {
+        font-size: 32px;
+      }
+    }
+
+    @media screen and (min-width: 800px) {
+      .profile-image {
+        width: 50%;
+        max-width: 500px;
+      }
+
+      .profile-image-container {
+        gap: 120px;
+        padding-bottom: 50px;
+      }
+
+      .header {
+        font-size: 152px;
+      }
+
+      .sub-header {
+        font-size: 36px;
+      }
+
+      .header-block {
+        padding-top: 0px;
+        padding-bottom: 100px;
+      }
+
+      .medium-text {
+        font-size: 48px;
+      }
+
+      .body-container {
+        padding: 60px;
+      }
+
+      .contact-button {
+        font-size: 40px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <section id="call-to-action" class="call-to-action wf-section">
-    <div class="centered-container w-container"><img src="images/profile.png" loading="lazy" sizes="200px" alt="Profile Picture of Sawyer Blatz" class="image-3">
-      <h1 class="heading">Sawyer Blatz</h1>
-      <h1 class="h2">iOS Engineer &amp; Indie Dev</h1>
-      <div class="div-block">
-        <a href="https://apps.apple.com/us/developer/sawyer-blatz/id797283126" target="_blank" class="link-block w-inline-block"><img src="images/appstore.png" loading="eager" alt="App Store Link"></a>
-        <a href="https://www.longcovidmoonshot.com/" class="link-block w-inline-block"><img src="images/moonshot.png" loading="eager" alt="Long COVID Moonshot Link"></a>
-        <a href="https://twitter.com/SawyerBlatz" class="link-block w-inline-block"><img src="images/twitter.png" loading="eager" width="143" sizes="(max-width: 479px) 15vw, 50px" srcset="images/twitter.png 500w, images/twitter.png 512w" alt="Twitter Link"></a>
-        <a href="https://github.com/sblatz" class="link-block w-inline-block"><img src="images/github.png" loading="eager" alt="Github Link"></a>
-        <a href="https://www.linkedin.com/in/sawyerblatz/" class="link-block w-inline-block"><img src="images/linkedin.png" loading="eager" alt="Linkedin Link"></a>
+
+  <div class="body-container">
+    <div class="header-block">
+
+      <!-- <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+    <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="profile_landscape.jpg" alt="">
+    <div class="flex flex-col justify-between p-4 leading-normal">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+    </div>
+  </a> -->
+
+
+      <h1 class="header" data-aos="fade-up">Sawyer Blatz</h1>
+
+      <!-- More sections as you scroll down the webpage -->
+      <!-- <section id="sub-header"> -->
+
+      <!-- data-aos-offset="10px" doesn't work...? -->
+      <h2 class="sub-header" data-aos="fade-up" >iOS engineer, designer, and photographer.</h2>
+      <!-- </section>   -->
+    </div>
+
+    <div class="big-container">
+
+      <!-- Lays out vertically on mobile, otherwise horizontally -->
+      <div class="profile-image-container" data-aos="fade-up" data-aos-delay="300">
+        <img class="profile-image" src="profile_portrait.jpg" />
+
+        <div class="call-to-action-container">
+          <h2 class="medium-text">4+ years of mobile development experience at
+            Lyft, Slack, and Mozilla.<br><br>Featured App Store indie developer with 35K downloads.</h2>
+
+          <a href="mailto:sdblatz@gmail.com" class="contact-button">Get in touch ›</a>
+        </div>
+
       </div>
     </div>
-  </section>
+
+    <div class="work-container">
+      <div class="card">
+        <h1 class="card-header">Nudget</h1>
+        <h2 class="medium-text">A minimalist budgeting app with a focus on ease of use.</h2>
+        <a href="https://nudgetapp.com" class="contact-button">Learn more ›</a>
+      </div>
+
+      <div class="card">
+        <h1 class="card-header">Long COVID Moonshot</h1>
+        <h2 class="medium-text">An advoacy website designed to raise awareness & demand funding for Long COVID.</h2>
+        <a href="https://longcovidmoonshot.com" class="contact-button">Learn more ›</a>
+      </div>
+      
+    </div>
+
+  </div>
+
+
+  <!-- TODO: Put my profile pic in a little card Inside a bigger card that says "contact me" -->
+
+  <!-- other sections same as above... -->
+  <!-- Include and initialize the aos script -->
+  <script>
+
+    AOS.init({
+      once: true,
+      mirror: true
+    });
+  </script>
 </body>
