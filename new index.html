@@ -1,0 +1,424 @@
+<head>
+  <meta charset="utf-8">
+  <title>Sawyer Blatz</title>
+
+  <!--  Smart link previews  -->
+  <meta property="og:image" content="images/preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@SawyerBlatz">
+  <meta name="twitter:title" content="Sawyer Blatz">
+  <meta name="twitter:image" content="images/preview.png">
+  <!--  End smart link previews  -->
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <!-- Add the AOS library links -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+
+  <style>
+    .body-container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .header {
+      font-size: 92px;
+      font-weight: bold;
+      /* font-family: Roboto; */
+      color: #030712;
+      /* margin-bottom: -15px; */
+      line-height: 1em;
+      margin-bottom: 10px;
+      padding-top: 20px;
+    }
+
+    .card-header {
+      font-size: 52px;
+      font-weight: bold;
+      /* font-family: Roboto; */
+      color: #030712;
+      /* margin-bottom: -15px; */
+      line-height: 1em;
+      margin-bottom: -10px;
+    }
+
+    /* rgba(76, 86, 99, 0.88) */
+    /* 26px */
+
+
+    .sub-header {
+      /* font-family: Roboto; */
+      font-size: 32px;
+      /* font-weight: 500; */
+      color: #4b5563;
+      line-height: 1.1em;
+      padding-left: 5px;
+    }
+
+    .medium-text {
+      font-size: 28px;
+      color: #4b5563;
+      font-weight: 300;
+      line-height: 1.2em;
+      word-wrap: break-word;
+      font-weight: 400; 
+    }
+
+    .medium-text-higlight {
+      font-size: 28px;
+      color: #4b5563;
+      font-weight: 300;
+      line-height: 1.2em;
+      word-wrap: break-word;
+      font-weight: 500; 
+    }
+
+    .card-body {
+      font-size: 24px;
+      font-weight: thin;
+      color: #030712;
+    }
+
+    body {
+      font-family: Roboto;
+    }
+
+    .body-container { 
+      max-width: 1250px;
+      margin: auto;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .big-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .profile-image-container {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 20px;
+      margin-bottom: 100px;
+      /* align-items: center; */
+      gap: 45px;
+    }
+
+    .work-container {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      /* align-items: center; */
+      gap: 20px;
+    }
+
+    .call-to-action-container {
+      display: flex;
+      flex-direction: column;
+      /* justify-content: start; */
+      align-items: start;
+      gap: 40px;
+      /* width: 1200px; */
+      word-wrap: normal;
+      flex-grow: 1;
+
+      /* max-width: 800px; */
+    }
+
+    .profile-image {
+      width: 100%;
+      max-width: 400px;
+      align-self: center;
+      flex-grow: 0;
+      border-radius: 10px;
+      /* Rounded corners */
+      box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.25);
+      /* Adds shadow */
+      /* transition: transform 0.3s ease; */
+      transition: transform 0.5s, box-shadow 0.5s;
+
+      /* Rosponsive hover effect using transition */
+      /* perspective: 1000px; */
+
+    }
+
+    /* .image-container img {
+      transform: scale(1);
+      transition: transform 0.5s;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      transition: box-shadow 0.5s;
+    } */
+
+    .profile-image:hover {
+      transform: scale(1.01);
+      box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .card {
+      width: 100%;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      margin: auto;
+    }
+
+
+    .contact-button {
+      /* background-color: hsl(0, 7%, 82%); */
+      color: #030712;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      /* text-decoration: none; */
+      display: inline-block;
+      margin: 2px 1px;
+      border: 2px;
+      border-color: #030712;
+      border-radius: 5px;
+    }
+
+    .nudget-image {
+       width:500px;
+    }
+    a {
+      position: relative;
+      display: inline-block;
+      text-decoration: none;
+      color: black;
+    }
+
+    a:after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: black;
+      transition: width .3s;
+    }
+
+    a:hover:after {
+      width: 100%;
+    }
+
+    .photo-stack {
+      position: relative;
+      width: 400px;
+      /* assuming width of one photo */
+      height: 300px;
+      /* assuming height of one photo */
+    }
+
+    .photo {
+      position: absolute;
+      max-width: 300px;
+      transition: all 0.3s ease-out;
+      /* adjust as per your needs */
+    }
+
+    .photo:nth-child(1) {
+      z-index: 1;
+      transform: rotateZ(-4deg) translateX(-50px) ;
+    }
+
+    .photo:nth-child(2) {
+      z-index: 2;
+      transform: rotateZ(0deg);
+    }
+
+    .photo:nth-child(3) {
+      z-index: 3;
+      transform: rotateZ(6deg) translateX(20px);
+    }
+
+    .photo-stack:hover .photo:nth-child(1) {
+      transform: rotateZ(-2deg) translateX(-100px);
+      /* adjust as per your needs */
+    }
+
+    .photo-stack:hover .photo:nth-child(2) {
+      transform: rotateZ(-2deg) translateY(-150px);
+      /* adjust as per your needs */
+    }
+
+    .photo-stack:hover .photo:nth-child(3) {
+      transform: rotateZ(2deg) translateX(100px);
+      /* adjust as per your needs */
+    }
+
+    /* SIZE TBD */
+    @media screen and (min-width: 600px) {
+
+
+      .profile-image {
+        width: 50%;
+        max-width: 300px;
+        align-self: start;
+
+      }
+
+      .profile-image-container {
+        /* padding: 20px; */
+        flex-direction: row;
+        gap: 40px;
+      }
+
+      .medium-text {
+        font-size: 32px;
+      }
+    }
+
+    @media screen and (min-width: 800px) {
+      .profile-image {
+        width: 50%;
+        max-width: 500px;
+      }
+
+      .profile-image-container {
+        gap: 140px;
+        margin-bottom: 200px;
+      }
+
+      .header {
+        font-size: 152px;
+        padding-top: 40px;
+
+      }
+
+      .sub-header {
+        font-size: 36px;
+      }
+
+      .header-block {
+        padding-top: 0px;
+        margin-bottom: 100px;
+      }
+
+      .medium-text {
+        font-size: 32px;
+      }
+
+
+      .body-container {
+        /* padding: 60px; */
+      }
+
+      .call-to-action-container {
+        /* max-width: 650px; */
+      }
+
+      .contact-button {
+        font-size: 32px;
+      }
+
+      /* .big-container {
+
+        justify-content: center;
+      } */
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="body-container">
+    <div class="header-block">
+
+      <!-- <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+    <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="profile_landscape.jpg" alt="">
+    <div class="flex flex-col justify-between p-4 leading-normal">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+    </div>
+  </a> -->
+
+
+      <h1 class="header" data-aos="fade-up">Sawyer Blatz</h1>
+
+      <!-- More sections as you scroll down the webpage -->
+      <!-- <section id="sub-header"> -->
+
+      <!-- data-aos-offset="10px" doesn't work...? -->
+      <h2 class="sub-header" data-aos="fade-up">iOS engineer, designer, and photographer.</h2>
+      <!-- </section>   -->
+    </div>
+
+    <div class="big-container">
+
+      <!-- Lays out vertically on mobile, otherwise horizontally -->
+      <div class="profile-image-container" data-aos="fade-up" data-aos-delay="300">
+        <img class="profile-image" src="profile_portrait.jpg" />
+
+        <div class="call-to-action-container">
+          <div>
+
+            <h2 class="card-header">4+ years of industry experience.</h2>
+            <h2 class="medium-text">iOS developer at Lyft, Slack, and Mozilla.
+              Shipped major features, optimizations, and critical fixes to millions of users.</h2>
+          </div>
+          <div>
+
+            <h2 class="card-header">Indie developer.</h2>
+            <h2 class="medium-text">Designed and engineered apps featured on the
+              App Store with 35K downloads.</h2>
+
+          </div>
+
+          <a href="mailto:sdblatz@gmail.com" class="contact-button">Get in touch ›</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- <div class="photo-stack">
+      <img class="photo" src="photography/bushtit_in_tree.jpg" alt="Image 1">
+      <img class="photo" src="photography/chickadee_perched.jpg" alt="Image 2">
+          <img class="photo" src="photography/leaves_in_rain.jpg" alt="Image 3">
+    </div> -->
+
+    <div class="profile-image-container"  data-aos="fade-up" data-aos-delay="200">
+      <div class="call-to-action-container">
+        <div>
+          <h1 class="card-header">Nudget</h1>
+          <h2 class="medium-text">A minimalist budgeting app with a focus on ease of use. Quick entry and intuitive insights put you in control of your spending.</h2>
+          <h2 class="medium-text">Thousands of people use Nudget every week to manage their finances.</h2>
+        </div>
+        
+      <a href="https://apps.apple.com/us/app/nudget-spending-tracker/id1517339257" class="contact-button">Download on the App Store ›</a>
+</div>
+      
+      <img class="profile-image" style="max-width: 800px;" src="images/nudget_mocks.jpg">
+
+    </div>
+
+    <!-- <div class="work-container">
+      <div class="card">
+        <h1 class="card-header">Nudget</h1>
+        <h2 class="medium-text">A minimalist budgeting app with a focus on ease of use.</h2>
+        <a href="https://nudgetapp.com" class="contact-button">Learn more ›</a>
+      </div> -->
+
+      <!-- <div class="card">
+        <h1 class="card-header">Long COVID Moonshot</h1>
+        <h2 class="medium-text">An advoacy website designed to raise awareness & demand funding for Long COVID.</h2>
+        <a href="https://longcovidmoonshot.com" class="contact-button">Learn more ›</a>
+      </div> -->
+
+    </div>
+
+
+  <script>
+
+    AOS.init({
+      once: true,
+      mirror: true
+    });
+  </script>
+</body>
