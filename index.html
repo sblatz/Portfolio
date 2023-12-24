@@ -106,7 +106,7 @@
       justify-content: center;
       flex-direction: column;
       margin-top: 20px;
-      margin-bottom: 150px;
+      margin-bottom: 120px;
       gap: 30px;
       /* align-items: center; */
       /* gap: 10px; */
@@ -181,6 +181,11 @@
     .nudget-image {
       order: 1;
       margin-bottom: 20px;
+      margin-top: -100px;
+    }
+
+    .nudget-container { 
+      margin-top: 100px;
     }
 
     .nudget-text {
@@ -297,6 +302,14 @@
 
       }
 
+      .nudget-container { 
+      margin-top: 20px;
+      }
+
+      .nudget-image { 
+        margin-top: -20px;
+      }
+
       .medium-text {
         font-size: 18px;
       }
@@ -309,6 +322,18 @@
         order: 1;
       }
     }
+
+    @media screen and (min-width: 700px) {
+
+      .nudget-container { 
+      margin-top: 40;
+      }
+
+      .nudget-image { 
+        margin-top: -40px;
+      }
+    }
+
 
     @media screen and (min-width: 800px) {
       .large-image-and-text-container {
@@ -332,6 +357,16 @@
       }
     }
 
+    @media screen and (min-width: 850px) {
+      .nudget-container { 
+      margin-top: 60px;
+      }
+
+      .nudget-image { 
+        margin-top: -60px;
+      }
+    }
+
     @media screen and (min-width: 915px) {
       .card-header {
         font-size: 52px;
@@ -344,6 +379,14 @@
       .large-image-and-text-container {
         gap: 80px;
         margin-bottom: 150px;
+      }
+
+      .nudget-container { 
+      margin-top: 80px;
+      }
+
+      .nudget-image { 
+        margin-top: -80px;
       }
       /* .header {
         padding-top: 20px;
@@ -366,6 +409,18 @@
         font-size: 100px;
       }
     } */
+
+
+    @media screen and (min-width: 1000px) {
+
+      .nudget-container { 
+      margin-top: 120px;
+      }
+
+      .nudget-image { 
+        margin-top: -120px;
+      }
+    }
 
 
     @media screen and (min-width: 1155px) {
@@ -401,6 +456,15 @@
       .body-container {
         /* padding: 60px; */
       }
+
+      .nudget-container { 
+      margin-top: 130px;
+      }
+
+      .nudget-image { 
+        margin-top: -130px;
+      }
+
 
       .contact-button {
         font-size: 32px;
@@ -462,7 +526,7 @@
 
 
 
-    <div class="large-image-and-text-container" data-aos="fade-up" data-aos-delay="200">
+    <div class="large-image-and-text-container nudget-container" data-aos="fade-up" data-aos-delay="200">
       <div class="nudget-text call-to-action-container">
         <div>
           <h1 class="card-header">Nudget</h1>
@@ -475,7 +539,7 @@
           the App Store ›</a>
       </div>
 
-      <img class="nudget-image profile-image" style="max-width: 800px;" src="images/nudget_mocks.jpg">
+      <img class="nudget-image profile-image" style="max-width: 800px; box-shadow: none;" src="images/nudget_iPhone_mocks_4.jpg">
 
     </div>
 
@@ -493,11 +557,11 @@
 
       </div>
 
-      <img class="nudget-image profile-image" style="max-width: 800px; order: 1;" src="images/moonshot2.jpg">
+      <img class="profile-image" style="max-width: 800px; order: 1;" src="images/moonshot2.jpg">
 
     </div>
 
-    <div class="large-image-and-text-container" data-aos="fade-up" data-aos-delay="200">
+    <div class="large-image-and-text-container nudget-container" data-aos="fade-up" data-aos-delay="200">
       <div class="nudget-text call-to-action-container">
         <div>
           <h1 class="card-header">Photography</h1>
@@ -511,7 +575,7 @@
       </div>
 
 
-      <img class="nudget-image profile-image" style="max-width: 800px; order: 1; box-shadow: none;" src="images/photography_snapshot.jpg">
+      <img class="profile-image" style="max-width: 800px; order: 1; box-shadow: none;" src="images/photography_snapshot.jpg">
 
       <!-- <div class="nudget-image profile-image style=:max-width: 800px;" > -->
             <!-- <img class="nudget-image profile-image" src="photography/leaves_in_rain.jpg" alt="Image 1"/> -->
