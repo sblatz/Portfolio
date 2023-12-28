@@ -25,13 +25,13 @@
     #gallery {
       line-height: 0;
       column-count: 4;
-      column-gap: 5px;
+      column-gap: 10px;
     }
 
     #gallery img {
       width: 100%;
       height: auto;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
       /* filter: grayscale(100%); */
       transition: transform 0.5s ease-in-out;
 
@@ -73,15 +73,13 @@
   </style>
 </head>
 
-<body>
+<body style="margin: 0px; padding:0px; padding:10px;">
 
-  <div style="padding-top: 5px;">
+  <div style="padding-top: 10px; margin:0px;">
     <!-- <h1 class="header" style="margin-bottom: -10px;">Photo Gallery</h1> -->
-    <h2 class="sub-header">A collection of my favorite photographs over the years.</h2>
+    <h2 class="sub-header" style="margin:0px; padding-bottom: 10px;">A collection of my favorite photographs over the years.</h2>
 
     <div id="gallery">
-
-
       <img src="gallery/1.jpg">
       <img src="gallery/2.jpg">
       <img src="gallery/3.jpg">
@@ -105,14 +103,13 @@
       <img src="gallery/21.jpg">
       <img src="gallery/22.jpg">
       <img src="gallery/23.jpg">
-
     </div>
 
   </div>
 
   <script>
     AOS.init({
-      once: false,
+      once: true,
       mirror: true
     });
   </script>
@@ -134,6 +131,10 @@
       // Set the anchor href to the image src
       anchor.href = img.src;
       anchor.target = "_blank";
+
+      // Set the AOS data.
+      // img.setAttribute("data-aos", "fade-up");
+      // img.setAttribute("data-aos-mirror", "true")
 
       // Insert the anchor right before the img in the DOM tree
       img.parentNode.insertBefore(anchor, img);
