@@ -1,6 +1,16 @@
 <head>
   <meta charset="utf-8">
   <title>Sawyer Blatz</title>
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FCK8T6F159"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-FCK8T6F159');
+  </script>
 
   <!--  Smart link previews  -->
   <meta property="og:image" content="images/preview.jpg">
@@ -87,7 +97,8 @@
           the App Store ›</a>
       </div>
 
-      <img class="nudget-image profile-image" style="max-width: 800px; box-shadow: none;" src="images/nudget_iPhone_mocks.jpg">
+      <img class="nudget-image profile-image" style="max-width: 800px; box-shadow: none;"
+        src="images/nudget_iPhone_mocks.jpg">
 
     </div>
 
@@ -109,7 +120,7 @@
 
     </div>
 
-    <div class="large-image-and-text-container nudget-container" data-aos="fade-up" >
+    <div class="large-image-and-text-container nudget-container" data-aos="fade-up">
       <div class="nudget-text call-to-action-container">
         <div>
           <h1 class="card-header">Photography</h1>
@@ -123,17 +134,18 @@
       </div>
 
 
-      <img class="profile-image" style="max-width: 800px; order: 1; box-shadow: none;" src="images/photography_snapshot_2.jpg">
+      <img class="profile-image" style="max-width: 800px; order: 1; box-shadow: none;"
+        src="images/photography_snapshot_2.jpg">
 
       <!-- <div class="nudget-image profile-image style=:max-width: 800px;" > -->
-            <!-- <img class="nudget-image profile-image" src="photography/leaves_in_rain.jpg" alt="Image 1"/> -->
+      <!-- <img class="nudget-image profile-image" src="photography/leaves_in_rain.jpg" alt="Image 1"/> -->
 
-        <!-- </div>  -->
+      <!-- </div>  -->
 
       <!-- <div class="profile-image" style="max-width: 800px; order: 2;" > -->
-        <!-- <img class="nudget-image profile-image style=:max-width: 800px;" src="photography/leaves_in_rain.jpg" alt="Image 1"> -->
+      <!-- <img class="nudget-image profile-image style=:max-width: 800px;" src="photography/leaves_in_rain.jpg" alt="Image 1"> -->
 
-        <!-- <div class="photo-stack" style="max-width: 800px; order: 2;" id="photo-stack"> 
+      <!-- <div class="photo-stack" style="max-width: 800px; order: 2;" id="photo-stack"> 
          <img class="photo" src="photography/leaves_in_rain.jpg" alt="Image 1">
            <img class="photo" src="photography/bushtit_in_tree.jpg" alt="Image 2">
           <img class="photo" src="photography/chickadee_perched.jpg" alt="Image 3"> 
@@ -167,7 +179,7 @@
     for (let img of images) {
       img.addEventListener('mouseover', () => {
         for (let i of images) {
-          i.style.zIndex = i === img ? '1' : '0'; 
+          i.style.zIndex = i === img ? '1' : '0';
           i.style.opacity = i === img ? '1' : '0.25';  // If it's the hovered image, keep it visible. Otherwise, hide it.
         }
       });
@@ -175,7 +187,7 @@
       img.addEventListener('mouseout', () => {
         for (let i of images) {
           i.style.opacity = '1';  // When mouseout, make all images visible.
-          i.style.zIndex = '0'; 
+          i.style.zIndex = '0';
         }
       });
     }
